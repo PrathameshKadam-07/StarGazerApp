@@ -58,7 +58,25 @@ OAUTH_KEY=your_api_key_here
 
 ## ▶️ Running the App
 
-Once everything is set up, run:
+Step 1: Temporarily allow scripts in this session
+
+```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+```
+
+Step 2: Activate the virtual environment
+
+```bash
+.\venv\Scripts\activate
+```
+
+Step 3: Install dependencies (if not already installed)
+
+```bash
+pip install streamlit requests beautifulsoup4 geopy python-dotenv
+```
+
+Step 4: Run the app
 
 ```bash
 streamlit run stargazer.py
@@ -67,6 +85,14 @@ streamlit run stargazer.py
 Then go to `http://localhost:8501` in your browser to see the app.
 
 ---
+
+## ⚠️ Optional: Permanent fix for PowerShell execution
+
+If you want to avoid repeating step 2 every time:
+
+```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 
 ## 🧰 Technologies Used
 
